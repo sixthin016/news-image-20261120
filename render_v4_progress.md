@@ -110,3 +110,22 @@
   (tipografi lebih lega) vs kita 42 (lebih padat — trade-off brief).
   Panel 23 trader masih kecil; panel 01 jabat tangan masih sederhana.
 - TIDAK bundle, TIDAK submit — koordinator yang memutuskan kuota.
+
+## Promote + push + kit check (20 Nov ~19:05 WITA)
+- `cp entry_v4.png entry.png`; README.md + NOTES.md diperbarui (v4).
+- Commit `3e24158424ec123cc7bbf8d6bc6923c9cea6f52f` (6 file:
+  entry.png, entry_v4.png, render_v4.py, render_v4_progress.md,
+  README.md, NOTES.md). CATATAN: branch repo ini `master`, bukan
+  `main` (brief bilang main) — `git push origin main` gagal
+  "src refspec main does not match any"; push yang benar
+  `GIT_ASKPASS=~/workspace/.git-askpass.sh git push origin master`
+  (remote HEAD sebelumnya 8305bbc di master).
+- Push OK: remote HEAD = `3e24158424ec123cc7bbf8d6bc6923c9cea6f52f`
+  (terverifikasi via `git ls-remote origin HEAD`).
+- Kit check (`node cli/makefun.mjs check --kit <kit> --repo <repo>
+  --worktree`): **4 passed** (competition_open, snapshot,
+  license_osi, entrypoint), **1 failed = transcripts_present
+  (DIHARAPKAN — koordinator yang bundle)**, 14 skipped, 5 checks
+  "at submission" (repo_public, repo_owner, repo_created_after_open,
+  commit_in_repo, duplicate_snapshot — tidak bisa dicek lokal;
+  commit_in_repo terpenuhi karena 3e24158 sudah ter-push).
