@@ -107,3 +107,18 @@ Catatan kejujuran:
   deck sebelum baris sumber (gaya lapang pemenang, bukan cacat).
 - File: render_v3.py, entry_v3.png, manifest.json (diperbarui),
   render_v3_progress.md. Commit lokal (tanpa push).
+
+## Finish-up (20 Nov 2026 ~13:41 WITA, sesi builder bundle)
+- **Swap entry.png:** `cp entry_v3.png entry.png` — entry.png kini v3,
+  md5 `326cc354134c0467fa30cbec23ed6431`, 381.724 byte, 1024×1024
+  (sebelumnya v2, md5 `168d959f6e6494af0576ab9796c6dbf7`).
+- **README.md diperbarui ke v3:** 3 lead berilustrasi penuh (Akvan,
+  Kyiv, COP31) bukan 4; renderer render_v3.py; md5 + ukuran baru;
+  masthead tanggal raksasa + strip 6 angka; set 42 cerita dikoreksi
+  ke Jumat 20 Nov. Ketiga badge make.fun di atas README tidak diubah.
+- **Verifikasi main.py 2x:** `MAKEFUN_OUTPUT_DIR=/tmp/v3check_out1`
+  dan `/tmp/v3check_out2` — kedua output byte-identik dengan
+  entry_v3.png (md5 `326cc354134c0467fa30cbec23ed6431`, `cmp` OK).
+- **Render ulang render_v3.py 2x:** md5 tetap
+  `326cc354134c0467fa30cbec23ed6431` (deterministik).
+- TIDAK push GitHub, TIDAK submit, TIDAK sentuh credentials.
