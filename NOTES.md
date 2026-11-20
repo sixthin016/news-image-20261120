@@ -53,3 +53,10 @@
 - FINAL GATE LOLOS (koordinator): halaman penuh v3 jelas lebih visual
   dari #50 sekilas. Sisa kelemahan jujur: blok kota lead 04 kecil,
   mobil lead 02 kecil tapi terbaca, wajah trio tanpa fitur (sama spt #50).
+
+## v3 (20 Nov 2026 ~13:45 WITA) — full page winner-style
+- render_v3.py -> entry_v3.png 1024x1024, 381.724 byte, md5 326cc354134c0467fa30cbec23ed6431 (2x identik).
+- Masthead tanggal raksasa, strip 6 angka, 3 lead (Akvan gate-approved / Kyiv rudal / COP31 Antalya), 12 panel, peta + daftar 27 (3 kolom), DATE CHECK penuh.
+- NOL "...": validate() menolak bila teks tidak muat. Set 42 cerita dikoreksi ke Jumat 20 Nov (deklarasi Shenzhen 00:31 UTC, rudal balistik Kyiv semalam, COP31 $120bn dihapus, Anthropic close $97.17 +17%, Phillips 118, Nicholls 175*); 10+1 item 19 Nov ke DATE CHECK.
+- Catatan: /tmp/w1.webp, /tmp/w2.webp, /tmp/w10.webp hilang dari /tmp di tengah sesi (kemungkinan restart VM) — gambar pemenang tidak berhasil dibaca di sesi ini; penilaian vs pemenang memakai brief + catatan v2.
+- BELUM push / submit. entry.png v2 TIDAK ditimpa.
