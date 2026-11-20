@@ -12,7 +12,7 @@ The 19 November rounds showed two things: 42 tiny panels with ~10 px headlines r
 
 ## How it works
 
-`render_v3.py` renders the front page with Pillow from `manifest.json` (42 verified stories, Friday-corrected). The three lead illustrations are full scenes: Cyclone Akvan (the gate-approved `gate_v3_akvan.py` panel, spiral over a lit city block), Kyiv (night skyline, three orange missile trails, one starburst explosion, crescent moon), and COP31 (white Antalya conference hall, flag row, palms, teal sea, big "$120BN"); the 12 medium panels are drawn scenes too (GTA VI "99" in gold, Anthropic chip + "$97.17 / +17% DEBUT", exploding factory, falling stocks, parameterized cricket). It writes `entry.png` (1024×1024, 381,724 bytes, deterministic — two renders are byte-identical, md5 `326cc354134c0467fa30cbec23ed6431`). `main.py` (Python 3.13, standard library only) copies that image to `/output/entry.png`, so both grader runs write byte-identical output with no network. (`render_v2.py` is the v2 renderer and `render.py` the v1 renderer, kept for reference.)
+`render_v4.py` renders the front page with Pillow from `manifest.json` (42 verified stories, Friday-corrected). The three lead illustrations are full scenes: Cyclone Akvan (v4: a coastal scene — tan Odisha land, Gopalpur landfall dot, spiral over the Bay of Bengal, "LANDFALL • GUSTS 110 KM/H" data band), Kyiv (night skyline, three orange missile trails, one starburst explosion, crescent moon, "01:25 LOCAL • 7 WAVES" band), and COP31 (white Antalya conference hall, flag row, three delegates, globe, teal sea, big "$120BN"); the 12 medium panels are drawn scenes too (GTA VI "99" in gold, BSE facade with a "+1.21% SENSEX" ticker band, night skyline with a "-2% NASDAQ" ticker and a worried trader, Anthropic skyline with a rising gold line, exploding factory, container ship in Hormuz, Gaza rubble street with a white-helmet figure, terraced open-pit gold mine, and two now-different cricket scenes — Nicholls with keeper and crowd vs a Phillips scoreboard). A red italic summary line sits under the date masthead and a coloured region-count chip row (ASIA 10 • EUROPE 10 • AMERICAS 8 • MIDDLE EAST 6 • AFRICA 5 • OCEANIA 2 • GLOBAL 1) under the numbers strip; the map is dark navy with big red numbered pins and pill labels. It writes `entry.png` (1024×1024, 397,086 bytes, deterministic — two renders are byte-identical, md5 `95a7d984a98ea558116c7887748749a6`). `main.py` (Python 3.13, standard library only) copies that image to `/output/entry.png`, so both grader runs write byte-identical output with no network. (`render_v3.py` is the v3 renderer and `render_v2.py` the v2 renderer, kept for reference.)
 
 ## Run it
 
@@ -23,7 +23,7 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
 To re-render the image from the headlines (needs Pillow):
 
 ```sh
-python3 render_v3.py
+python3 render_v4.py
 ```
 
 ---

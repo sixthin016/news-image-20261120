@@ -60,3 +60,32 @@
 - NOL "...": validate() menolak bila teks tidak muat. Set 42 cerita dikoreksi ke Jumat 20 Nov (deklarasi Shenzhen 00:31 UTC, rudal balistik Kyiv semalam, COP31 $120bn dihapus, Anthropic close $97.17 +17%, Phillips 118, Nicholls 175*); 10+1 item 19 Nov ke DATE CHECK.
 - Catatan: /tmp/w1.webp, /tmp/w2.webp, /tmp/w10.webp hilang dari /tmp di tengah sesi (kemungkinan restart VM) — gambar pemenang tidak berhasil dibaca di sesi ini; penilaian vs pemenang memakai brief + catatan v2.
 - BELUM push / submit. entry.png v2 TIDAK ditimpa.
+
+## v4 (20 Nov 2026 ~18:50-19:00 WITA) — scene upgrades vs #1 live
+- Referensi #1 diambil ulang dari leaderboard API (7.292 entri): #1
+  888dao-sats, judge 991.652, 36 cerita; entri kita (v3) rank 476 saat
+  fetch. Gambar #1 dari artifact API (repo source_withheld).
+- render_v4.py -> entry_v4.png 1024x1024, 397.086 byte, md5
+  95a7d984a98ea558116c7887748749a6 (render 2x identik; main.py 2x ke
+  /tmp byte-identik dgn entry.png).
+- Perubahan (detail di render_v4_progress.md): lead Akvan jadi scene
+  pesisir (daratan + Gopalpur + band data; tag v3 dulu tertabrak busur
+  spiral); scene lead 190->210px; subline miring merah di bawah judul
+  + baris chip region (ASIA 10, EUROPE 10, AMERICAS 8, MIDDLE EAST 6,
+  AFRICA 5, OCEANIA 2, GLOBAL 1); band data bawah di lead Kyiv;
+  panel 09 fasad BSE + ticker, 23 skyline + ticker "-2% NASDAQ" +
+  trader berwajah, 27 skyline + garis emas (bukan glyph chip);
+  panel 01 jabat tangan, 03 wajah + India Gate + karpet merah;
+  31 jalan reruntuhan + figur helm putih, 37 tambang terbuka berteras
+  + truk; kriket 41 (keeper + tribun) vs 42 (papan skor) dibedakan;
+  peta navy gelap + pin merah besar + label pill (tabrakan
+  HORMUZ/ODISHA selesai); COP31 delegasi + globe, laut dipangkas.
+- Dua cacat iterasi: subline sempat menabrak judul (judul 58->54pt,
+  subline 12pt di y=69) + garis emas panel 27 sempat menabrak teks
+  "+17% DEBUT" (garis diturunkan) — keduanya dicek ulang via zoom.
+- Temuan: spek v3 mengklaim 5 edit panel (chart -> scene dll) tapi
+  render_v2_v3.py md5-nya IDENTIK dgn render_v2.py dan render_v3.py
+  mengimpor sc_09 dari v2 — edit itu tidak pernah mendarat di entri
+  live v3; v4 mengerjakannya sekarang.
+- manifest.json TIDAK diubah. validate() tetap menolak teks overflow
+  (2 baris max, tanpa "..."). TIDAK bundle, TIDAK submit (koordinator).
