@@ -96,7 +96,53 @@
 ## Promote + push + kit check
 
 - `cp entry_v5.png entry.png`; README.md + NOTES.md diperbarui (v5).
-- Commit + push via `GIT_ASKPASS=~/workspace/.git-askpass.sh git push origin master`
-  (branch master, bukan main).
-- Kit check (`node cli/makefun.mjs check --kit <kit> --repo <repo> --worktree`):
-  (diisi setelah push).
+- Commit `ca811915e147d1b1824f718068d4ba5e6f952aa6` (6 file:
+  entry.png, entry_v5.png, render_v5.py, render_v5_progress.md,
+  README.md, NOTES.md). Push OK via
+  `GIT_ASKPASS=~/workspace/.git-askpass.sh git push origin master`
+  (branch master, bukan main); remote HEAD = `ca81191` terverifikasi.
+- Repo About terverifikasi via GitHub API (PAT valid, login
+  sixthin016): description + homepage bounty URL + topics
+  (ai-agents, bounties, growth, makefun).
+- Kit check (`node cli/makefun.mjs check --kit <kit> --repo <repo>
+  --worktree`): **4 passed** (competition_open, snapshot,
+  license_osi, entrypoint), **1 failed = transcripts_present
+  (DIHARAPKAN — bundle route)**, 14 skipped, 5 checks "at submission".
+  Catatan kit: copy level 27, site level 33 — level 27 >= 20 memenuhi
+  syarat run record; tidak di-download ulang.
+
+## Judge panel (21 Nov ~17:45 WITA) — LOLOS
+
+- Panel v1.0.5, `--models nvidia,gemini` (OpenRouter habis 50/hari
+  15:30). Percobaan pertama NO_JUDGE (NVIDIA unparseable + Gemini
+  HTTP 503 high demand); retry berhasil.
+- **NVIDIA 78 (medium), Gemini 88 (high) → mean 83,0, min 78 →
+  VERDICT: SUBMIT.**
+- Head-to-head vs v4: **B (v5) menang 2-0**, margin medium;
+  NVIDIA a=72 b=86 (+14), Gemini a=93 b=97 (+4) — di atas noise ~5.
+- Laporan panel:
+  `~/workspace/makefun/judge-panel-news-image-20261120-news-image-20261120-20261121T093224Z.json`.
+  Grade/evidence: `news-image-20261120-v5-grade.txt`,
+  `news-image-20261120-v4-grade.txt`, `news-image-20261120-evidence.txt`.
+
+## Bundle + check (21 Nov ~17:55 WITA) — MENUNGGU PARENT
+
+- Bundle: `~/workspace/makefun/news-image-20261120-bundle-v5.tar.gz`
+  (21.188.852 byte, sha256
+  7a5f6500dd3e549b23767fcc1ccf1a32564cc2b59dc9d4068a4ad38ef3ca0611),
+  56 sesi (1 Hermes + 55 Muse app, termasuk sesi build v5 ini),
+  prompt file v4-prompt.txt ("kejar terus semuanya sampai masuk
+  target top rank", origin other), system prompt
+  `~/workspace/system/system_prompt.md`, harness muse 1.3 / meta /
+  muse-spark-1.3 / default, mcp none. Log:
+  `~/workspace/makefun/bundle-news-image-20261120-v5.log`.
+- Check terhadap bundle: **12 passed, 1 failed, 6 skipped, 5 at
+  submission**. Satu-satunya FAIL = thinking_priced (0 usage rows) —
+  subagent TIDAK BISA melampirkan usage rows-nya sendiri; row ditulis
+  hanya setelah run subagent selesai. **Parent harus: query muse.db
+  → append ke `~/.makefun/muse-usage-news-image-20261120.jsonl` →
+  bundle ulang dengan --muse-usage → check → submit.**
+  Detail + perintah persis: `news-image-20261120-v5-HANDOFF.md`.
+- JANGAN submit bundle 0-usage-rows (ditolak). Deadline submit
+  08:00 WITA 22 Nov 2026; kuota terakhir dicek 17:40 WITA: day left 6,
+  can_submit=true, accepting=true.
