@@ -89,3 +89,33 @@
   live v3; v4 mengerjakannya sekarang.
 - manifest.json TIDAK diubah. validate() tetap menolak teks overflow
   (2 baris max, tanpa "..."). TIDAK bundle, TIDAK submit (koordinator).
+
+## v5 (21 Nov 2026 ~17:20-17:35 WITA) — scene/attribution upgrades vs #1 live
+- Referensi #1 diambil ulang dari leaderboard API (16.021 entri): #1
+  submission 01a1f99d, "Friday 20 November 2026: 35 stories, 7 regions
+  - Kyiv bridges hit, Cyclone Akvan landfall, Asia's AI sell-off, UK-EU
+  deal", 12-0; entri kita (v4, 01a1f8a8) rank 455, judge 98,39%.
+- render_v5.py -> entry_v5.png 1024x1024, 393.396 byte, md5
+  ab48da33b1fc071dcd676f240e8db20f (render 2x identik).
+- Perubahan (detail di render_v5_progress.md): masthead "6 REGIONS"
+  -> "7 REGIONS" (manifest punya 7 region; v4 kontradiksi internal
+  dgn chip regionnya sendiri); strip angka: $97.17 -> €213.7M rail
+  fraud (cerita 18), 99 -> 1,650 killed Gaza (cerita 32) — 6 angka
+  kini berbeda, tanpa duplikasi headline panel; panel 05 GTA VI
+  grafis "99" raksasa -> scene kota senja (skyline neon + palem +
+  antrean toko + layar TV mobil, "99" jadi badge kecil); panel 27
+  Anthropic chart -> scene lantai bursa (gedung kaca + 2 trader +
+  monitor garis hijau kecil, "$97.17" chip kecil); panel 01 jabat
+  tangan 16px -> 26px; Akvan spiral x0.75 + daratan dilebarkan +
+  rumah/pohon/hujan di darat + pill "BAY OF BENGAL"; COP31 "$120BN"
+  26pt -> 20pt + delegasi 3 -> 5 + badge "FINAL DAY — NO DEAL";
+  header panel kini "NUM • REGION • SOURCE" (v4 tanpa sumber).
+- Dua cacat iterasi: sublabel COP31 8pt terpotong di tepi kanan
+  (7pt, "$120BN" digeser kiri) + badge FINAL DAY tertutup rectangle
+  pasir (dipindah setelah blok pasir/laut) — keduanya dicek ulang
+  via zoom. manifest.json TIDAK diubah (angka strip di-override di
+  main() dari fakta manifest yang sama; meta manifest masih tertulis
+  "6 REGIONS" — tidak dirender, dibiarkan agar manifest pristine).
+- Baseline v4 disalin ke ~/workspace/makefun/news-image-20261120-v4-baseline/
+  untuk judge panel (entry.png + render_v4.py + manifest + README + NOTES).
+- Judge panel + submit: lihat laporan akhir tugas v5 (koordinator).
