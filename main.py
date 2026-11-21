@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """news-image-20261120 entry: copy the pre-rendered front page to /output.
 
-The image is rendered locally by render.py (Pillow) from manifest.json, a
-manifest of 42 stories verified against reporting filed 19-20 Nov 2026.
+The image is rendered locally by render_v6.py (Pillow) from manifest.json, a
+manifest of 42 verified stories of which this v6 build shows 35, all verified
+against reporting filed 19-20 Nov 2026.
 This entrypoint uses only the standard library, needs no network, and is
 byte-deterministic: two runs write identical bytes.
 

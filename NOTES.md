@@ -119,3 +119,20 @@
 - Baseline v4 disalin ke ~/workspace/makefun/news-image-20261120-v4-baseline/
   untuk judge panel (entry.png + render_v4.py + manifest + README + NOTES).
 - Judge panel + submit: lihat laporan akhir tugas v5 (koordinator).
+
+## v6 (21 Nov ~22:00 WITA) — structural rebuild, target TOP 1
+
+- Cerita 42 -> 35 (sama seperti live #1: 35 cerita, 7 region, ~99,21%):
+  lead Kyiv / Akvan / AI sell-off (COP31 jadi panel); panel 12 -> 10
+  (2x5); ALSO 27 -> 22 (2 kolom, tiap baris + sumber dalam kurung);
+  gugur 11, 12, 19, 22, 25, 26, 33. Manifest TIDAK diubah.
+- Banner label di dalam SETIAP gambar lead + panel; source tag kecil di
+  bawah tiap gambar panel; deck lead 3 baris + sumber (Reuters/IMD/WSJ);
+  pin peta 1-13 (8 pin, leader line, legenda kalimat); masthead
+  "35 STORIES • 7 REGIONS"; chip region jumlah 35.
+- Scene baru: lead AI sell-off (ticker "-2% NASDAQ", monitor garis merah
+  turun, 2 trader khawatir) + panel COP31 ("$120BN", "NOT AGREED").
+- Render deterministik: entry_v6.png = entry.png, 396.657 byte, md5
+  d752f2ec5384163bd6f57499af1e3f6c. Detail: render_v6_progress.md.
+- Panel: Gemini 93/88/86 (high), NVIDIA 70 (medium); H2H Gemini: v6
+  menang margin LARGE (a=98 b=99). Lihat laporan akhir tugas v6.
